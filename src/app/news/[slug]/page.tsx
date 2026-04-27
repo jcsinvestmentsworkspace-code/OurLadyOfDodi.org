@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/page-header";
 import { FadeUp } from "@/components/fade-up";
 import { ArrowLeft } from "lucide-react";
-import { allNews } from "../page";
+import { allNews } from "../data";
 
 export function generateStaticParams() {
   return allNews.map((item) => ({ slug: item.slug }));

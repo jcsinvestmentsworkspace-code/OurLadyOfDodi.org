@@ -1,16 +1,20 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { PageHeader } from "@/components/page-header";
 import { FadeUp } from "@/components/fade-up";
 import { Newspaper, ArrowRight } from "lucide-react";
 import Image from "next/image";
-
+import { allNews } from "./data";
  
-const allNews = [
+/*const allNews = [
   {
     title: "Feast of Our Lady of Dodi Celebrated with Joy",
     slug: "feast-celebration-2026",
     date: "May 30th, 2026",
     image: "/news/grottoflyer-1.jpeg", // 👈 ADD THIS
+    video: "/news/dodi-ads.mp4",
     excerpt: "Thousands of pilgrims gathered...",
     content: "The Our Lady of Dodi Grotto warmly invites all faithful to the 2026 Annual Pilgrimage on Saturday, 30th May. Join us for a spiritually enriching day of prayer, reflection, healing, and renewal as we honor the Blessed Virgin Mary. Come as a parish, family, or individual and experience a powerful encounter of faith, unity, and divine grace."
   },  
@@ -42,10 +46,12 @@ const allNews = [
           excerpt: "Our Lady of Dodi expands its charitable outreach to serve more families in the surrounding communities.", 
           content: "Our Lady of Dodi has expanded its parish outreach programme to serve more families in the surrounding communities. The expanded programme now includes regular food distribution, medical outreach clinics, educational support for children, and counselling services. This expansion reflects the Church's commitment to living the Gospel through works of mercy and charity. Volunteers from the parish and visiting pilgrims have been instrumental in making this expansion possible." },
 ];*/
-    ];
+  
 export { allNews };
 
 export default function NewsPage() {
+  const [openVideo, setOpenVideo] = useState<string | null>(null);
+
   return (
     <>
       <PageHeader title="News & Updates" subtitle="Official communications from Our Lady of Dodi" />
@@ -55,7 +61,10 @@ export default function NewsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allNews.map((item, i) => (
               <FadeUp key={item.slug} delay={i * 80}>
-                <Link href={`/news/${item.slug}`} className="group block rounded-xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all h-full">
+               <div
+  onClick={() => item.video && setOpenVideo(item.video)}
+  className="group block cursor-pointer ..."
+>
                   <div className="relative h-44 w-full overflow-hidden">
   <Image
     src={item.image || "/news/default.jpg"}
@@ -78,12 +87,36 @@ export default function NewsPage() {
                       Read More <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>
-                </Link>
+                </div>
               </FadeUp>
             ))}
           </div>
         </div>
       </section>
+      {openVideo && (
+  <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+    <div className="relative w-full max-w-4xl">
+      
+      {/* Close button */}
+      <button
+        onClick={() => setOpenVideo(null)}
+        className="absolute -top-12 right-0 text-white text-2xl"
+      >
+        ×
+      </button>
+
+      {/* Video */}
+      <video
+        controls
+        autoPlay
+        className="w-full rounded-2xl bg-black"
+      >
+        <source src={openVideo} type="video/mp4" />
+      </video>
+
+    </div>
+  </div>
+)}
     </>
   );
 }
