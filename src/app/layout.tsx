@@ -17,10 +17,57 @@ const openSans = Open_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+
 export const metadata: Metadata = {
-  title: "Our Lady of Dodi — A Sanctuary of Faith & Healing",
-  description: "A place of prayer, peace, and pilgrimage. Our Lady of Dodi Catholic Church, Grotto & Pilgrimage Site.",
-};
+  metadataBase: new URL("https://www.ourladyofdodi.org"),
+
+  title: {
+    default: "Our Lady of Dodi — A Sanctuary of Faith & Healing",
+    template: "%s | Our Lady of Dodi",
+  },
+
+  description:
+    "Our Lady of Dodi Catholic Church, Grotto & Pilgrimage Site — a place of prayer, peace, healing and pilgrimage.",
+
+  icons: {
+    icon: "/new/Grotto-logo.png",
+    shortcut: "/new/Grotto-logo.png",
+    apple: "/new/Grotto-logo.png",
+  },
+
+  openGraph: {
+    title: "Our Lady of Dodi — A Sanctuary of Faith & Healing",
+    description:
+      "A place of prayer, peace, healing and pilgrimage at Our Lady of Dodi Catholic Church, Grotto & Pilgrimage Site.",
+    url: "https://www.ourladyofdodi.org",
+    siteName: "Our Lady of Dodi",
+    images: [
+      {
+        url: "/Grotto-Logo.png",
+        width: 1200,
+        height: 1200,
+        alt: "Our Lady of Dodi",
+      },
+    ],
+    locale: "en_GH",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "Our Lady of Dodi — A Sanctuary of Faith & Healing",
+    description:
+      "Our Lady of Dodi Catholic Church, Grotto & Pilgrimage Site.",
+    images: ["/news/Grotto-logo.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+
 
 export default function RootLayout({
   children,
