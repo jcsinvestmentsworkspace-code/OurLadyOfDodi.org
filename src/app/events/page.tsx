@@ -3,14 +3,98 @@ import { PageHeader } from "@/components/page-header";
 import { FadeUp } from "@/components/fade-up";
 import { CalendarDays, MapPin, ArrowRight } from "lucide-react";
 
-const allEvents = [
-  { title: "Special Retreat for Christian Mothers", slug: "special-retreat-christian-mothers", date: "August, 2026", time: "3:00 PM", location: "The Grotto", category: "Mass", description: "We seek to provide a nurturing environment for Christian mothers to deepen their relationship with God and each other." },
-  { title: "Marian Intercessory Prayer", slug: "marian-intercessory-prayer", date: "March 25, 2026", time: "6:00 PM", location: "Main Church", category: "Retreats", description: "A special evening of Marian devotion featuring the Rosary, Marian hymns, a reflection on Our Lady's role in salvation history, and Benediction of the Blessed Sacrament. This event coincides with the Solemnity of the Annunciation of the Lord." },
-  { title: "Easter Vigil Mass", slug: "easter-vigil-mass", date: "April 4, 2026", time: "7:00 PM", location: "Main Church", category: "Mass", description: "The most solemn and beautiful liturgy of the Church year. Beginning with the blessing of the new fire and the lighting of the Paschal candle, the Easter Vigil celebrates Christ's resurrection from the dead. This is also the night when catechumens receive the sacraments of initiation." },
-  { title: "Our Lady of Dodi Feast Day", slug: "feast-day-2026", date: "May 31, 2026", time: "8:00 AM", location: "The Grotto & Main Church", category: "Feasts", description: "The annual feast day of Our Lady of Dodi is the highlight of the pilgrimage year. Celebrations include a solemn High Mass, a candlelight procession to the Grotto, special devotions, testimonies of grace, and community fellowship. Pilgrims from across the country and beyond gather for this blessed occasion." },
-  { title: "Corpus Christi Procession", slug: "corpus-christi", date: "June 14, 2026", time: "10:00 AM", location: "Main Church & Grounds", category: "Feasts", description: "A solemn procession in honour of the Most Blessed Sacrament. The faithful process through the church grounds with the Eucharist, stopping at decorated altars for prayer and Benediction. This is a beautiful expression of Catholic devotion to the Real Presence." },
-  { title: "Monthly Recollection for Women", slug: "women-recollection", date: "First Saturday of Each Month", time: "9:00 AM", location: "Parish Hall", category: "Retreats", description: "A monthly day of recollection for women, featuring Mass, a conference by a spiritual director, time for personal prayer and confession, and Rosary at the Grotto. This is an opportunity for women of the parish and visiting pilgrims to deepen their spiritual life." },
+
+ const allEvents = [
+  {
+    title: "Special Retreat for Christian Mothers",
+    slug: "special-retreat-christian-mothers",
+    date: "August, 2026",
+    time: "3:00 PM",
+    location: "The Grotto",
+    category: "Mass",
+    description:
+      "We seek to provide a nurturing environment for Christian mothers to deepen their relationship with God and each other.",
+  },
+
+  {
+    title: "Marian Intercessory Prayer",
+    slug: "marian-intercessory-prayer",
+    date: "March 25, 2026",
+    time: "6:00 PM",
+    location: "Main Church",
+    category: "Retreats",
+    description:
+      "A special evening of Marian devotion featuring the Rosary, Marian hymns, a reflection on Our Lady's role in salvation history, and Benediction of the Blessed Sacrament. This event coincides with the Solemnity of the Annunciation of the Lord.",
+  },
+
+  {
+    title: "Easter Vigil Mass",
+    slug: "easter-vigil-mass",
+    date: "April 4, 2026",
+    time: "7:00 PM",
+    location: "Main Church",
+    category: "Mass",
+    description:
+      "The most solemn and beautiful liturgy of the Church year. Beginning with the blessing of the new fire and the lighting of the Paschal candle, the Easter Vigil celebrates Christ's resurrection from the dead. This is also the night when catechumens receive the sacraments of initiation.",
+  },
+
+  {
+    title: "Marian Devotion Night",
+    slug: "marian-devotion-night",
+    date: "May 1, 2026",
+    time: "6:00 PM",
+    location: "The Grotto",
+    category: "Devotions",
+    description:
+      "An evening of prayer and Marian devotion at the Grotto, featuring the Holy Rosary, Marian hymns, Scripture reflection, and time for quiet personal prayer before Our Lady.",
+  },
+
+  {
+    title: "Stations of the Cross",
+    slug: "stations-of-the-cross",
+    date: "Every Friday during Lent",
+    time: "6:00 PM",
+    location: "The Grotto & Church Grounds",
+    category: "Devotions",
+    description:
+      "Join the faithful in meditating upon the Passion of Christ through the Stations of the Cross. This traditional Lenten devotion offers an opportunity for prayer, repentance, and reflection on the sacrifice of Our Lord.",
+  },
+
+  {
+    title: "Our Lady of Dodi Feast Day",
+    slug: "feast-day-2026",
+    date: "May 31, 2026",
+    time: "8:00 AM",
+    location: "The Grotto & Main Church",
+    category: "Feasts",
+    description:
+      "The annual feast day of Our Lady of Dodi is the highlight of the pilgrimage year. Celebrations include a solemn High Mass, a candlelight procession to the Grotto, special devotions, testimonies of grace, and community fellowship. Pilgrims from across the country and beyond gather for this blessed occasion.",
+  },
+
+  {
+    title: "Corpus Christi Procession",
+    slug: "corpus-christi",
+    date: "June 14, 2026",
+    time: "10:00 AM",
+    location: "Main Church & Grounds",
+    category: "Feasts",
+    description:
+      "A solemn procession in honour of the Most Blessed Sacrament. The faithful process through the church grounds with the Eucharist, stopping at decorated altars for prayer and Benediction. This is a beautiful expression of Catholic devotion to the Real Presence.",
+  },
+
+  {
+    title: "Monthly Recollection for Women",
+    slug: "women-recollection",
+    date: "First Saturday of Each Month",
+    time: "9:00 AM",
+    location: "Parish Hall",
+    category: "Retreats",
+    description:
+      "A monthly day of recollection for women, featuring Mass, a conference by a spiritual director, time for personal prayer and confession, and Rosary at the Grotto. This is an opportunity for women of the parish and visiting pilgrims to deepen their spiritual life.",
+  },
+
 ];
+
 
 export { allEvents };
 

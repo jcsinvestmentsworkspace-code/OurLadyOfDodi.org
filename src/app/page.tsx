@@ -27,7 +27,7 @@ const galleryItems: GalleryItem[] = [
   {
     type: "video",
     src: "/videos/program-video2.mp4",
-    poster: "/news/after-event.jpeg",
+      poster: "/news/after-event.jpeg",
     alt: "Pilgrimage highlights video",
     caption: "Pilgrimage Highlights",
     muted: true,
@@ -48,10 +48,11 @@ const galleryItems: GalleryItem[] = [
     muted: false,
     loop: false,
   },
-   {
+  
+    {
     type: "video",
-    src: "/videos/program-video3.mp4",
-    poster: "/news/after-event2.jpeg",
+    src: "/videos/retreat_video.mp4",
+    poster: "/news/women_retreat.jpeg",
     alt: "Women's Retreat 2026 video",
     caption: "Women's Retreat 2026",
     muted: false,
@@ -63,18 +64,7 @@ const galleryItems: GalleryItem[] = [
     alt: "Pilgrims at the Grotto",
     caption: "A Place of Pilgrimage",
   },
-   {
-    type: "image",
-    src: "/news/church-7.jpeg",
-    alt: "Women Special Retreat 2026",
-    caption: "A Place of Pilgrimage",
-  },
-  {
-    type: "image",
-    src: "/news/aurthor.jpeg",
-    alt: "Interior of Our Lady of Dodi Church",
-    caption: "Sacred Interior",
-  },
+  
 ];
 
 /* ─────────────────────────────────────────
